@@ -5,7 +5,7 @@ module.exports = {
  extend :{ 
   fontSize: {
     sm: '0.8rem',
-    base: '1rem',
+    link: '.9rem',
     xl: '1.25rem',
     '2xl': '1.563rem',
     '3xl': '1.953rem',
@@ -14,6 +14,11 @@ module.exports = {
   },
   colors: {
     'text-paragraph': '#656565',
+    'header': "#2d2d2d",
+    'bgColor' : "#f7ba01",
+    'bgAshColor': '#e7e7e7',
+    'black': "#252525",
+    'sideBg' : '#202020'
   },
  }
   },
