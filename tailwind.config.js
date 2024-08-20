@@ -18,13 +18,30 @@ module.exports = {
     'bgColor' : "#f7ba01",
     'bgAshColor': '#e7e7e7',
     'black': "#252525",
-    'sideBg' : '#202020'
+    'sideBg' : '#202020',
+    'subsColor' : '#7d7d7d'
   },
  }
+  },
+  daisyui: {
+    themes: [
+      {
+        Kompass: {
+          primary: "#12a9b2",
+          secondary: "#149999",
+          accent: "#3A4256",
+          neutral: "#647393",
+          "base-100": "#ffffff",
+          info: "#0C1E21",
+          success: "#3A4256",
+        },
+      },
+    ],
   },
   plugins: [
     require('tailwindcss'),
     require('autoprefixer'),
+    require('daisyui'),
   ],
 }
 
