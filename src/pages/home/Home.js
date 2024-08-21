@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "./Banner";
-import slider_bg from "../../images/home/slider_bg.jpg";
+import slider_bg from "../../assets/images/home/slider_bg.jpg";
 export default function Home() {
   return (
     <div
@@ -9,9 +9,9 @@ export default function Home() {
     >
       <div className="container">
         <div className="md:mx-2  mx-2">
-          <div className="grid grid-cols-6 gap-4">
+          <div className="grid grid-cols-5 gap-4">
             <div></div>
-            <div className="col-span-5">
+            <div className="col-span-4">
               <Banner></Banner>
             </div>
           </div>

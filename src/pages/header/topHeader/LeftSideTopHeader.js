@@ -1,5 +1,5 @@
 import React from 'react'
-import bdFlag from '../../../images/header/bdFlag.png'
+import bdFlag from '../../../assets/images/header/bdFlag.png'
 export default function LeftSideTopHeader() {
   return (
 <div > 

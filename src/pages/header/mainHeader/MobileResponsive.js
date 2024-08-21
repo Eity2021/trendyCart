@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import responceLogo from "../../../images/header/logo_black.png"
+import responceLogo from "../../../assets/images/header/logo_black.png"
 export default function MobileResponsive({isOpen  , toggleSidebar}) {
 
 

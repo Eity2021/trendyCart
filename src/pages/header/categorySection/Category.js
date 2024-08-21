@@ -12,7 +12,7 @@ export default function Category() {
             <CategoryDropDown></CategoryDropDown>
           </div>
 
-       <SearchBar></SearchBar>
+             <SearchBar></SearchBar>
 
           <div className="lg:flex  hidden justify-end">
             <FreeShipping></FreeShipping>
