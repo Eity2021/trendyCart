@@ -19,7 +19,8 @@ module.exports = {
     'bgAshColor': '#e7e7e7',
     'black': "#252525",
     'sideBg' : '#202020',
-    'subsColor' : '#7d7d7d'
+    'subsColor' : '#7d7d7d',
+    'bottomColor': '#303030'
   },
  }
   },

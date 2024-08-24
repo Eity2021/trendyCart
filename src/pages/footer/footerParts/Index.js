@@ -7,7 +7,7 @@ import FooterPartsThree from './FooterPartsThree'
 export default function MiddleFooter() {
   return (
 <div className='border-t-2 pt-8'>
-<div className='grid grid-cols-4'>
+<div className='grid lg:grid-cols-4  sm:grid-cols-2 grid-cols-1'>
         <FooterPartsOne></FooterPartsOne>
         <FooterPartsTwo></FooterPartsTwo>
         <FooterPartsThree></FooterPartsThree>
