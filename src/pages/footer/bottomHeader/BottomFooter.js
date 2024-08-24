@@ -3,7 +3,7 @@ import cardImg from "../../../assets/images/bottom/card_img.png";
 
 export default function BottomFooter() {
   return (
-    <div className="bg-bottomColor">
+    <div className="bg-bottomColor ">
       <div className="container ">
         <div className="md:mx-2  mx-2 py-4">
           <div className="sm:flex block justify-between ">

@@ -20,7 +20,9 @@ module.exports = {
     'black': "#252525",
     'sideBg' : '#202020',
     'subsColor' : '#7d7d7d',
-    'bottomColor': '#303030'
+    'bottomColor': '#303030',
+    'loginColor':'#ff6000',
+    'loginHeadingColor':'#6d6c6c'
   },
  }
   },
