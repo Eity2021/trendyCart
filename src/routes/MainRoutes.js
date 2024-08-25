@@ -42,7 +42,7 @@ const MainRoutes = {
       ),
     },
     {
-      path: "Login",
+      path: "login",
       element: (
         <Suspense fallback={<p>Loading...</p>}>
           <Login />

@@ -22,7 +22,10 @@ module.exports = {
     'subsColor' : '#7d7d7d',
     'bottomColor': '#303030',
     'loginColor':'#ff6000',
-    'loginHeadingColor':'#6d6c6c'
+    'loginHeadingColor':'#6d6c6c',
+    'loginBg':'rgba(255, 96, 0, 0.659)',
+    'buttonHover':'#222',
+    'textButtonColor':'#727272'
   },
  }
   },
