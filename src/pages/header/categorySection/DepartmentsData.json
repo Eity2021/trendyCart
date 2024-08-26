@@ -1,0 +1,99 @@
+
+
+
+[
+  {
+    "title": "Electronics",
+    "image": "avatar",
+    "subcategories": [
+      { "name": "Mobile Phones", "path": "/electronics/mobile-phones" },
+      { "name": "Laptops", "path": "/electronics/laptops" },
+      { "name": "Cameras", "path": "/electronics/cameras" }
+    ]
+  },
+
+  
+  {
+    "title": "Home & Kitchen",
+    "image": "avatar",
+    "subcategories": [
+      { "name": "Mobile Phones", "path": "/electronics/mobile-phones" },
+      { "name": "Laptops", "path": "/electronics/laptops" },
+      { "name": "Cameras", "path": "/electronics/cameras" }
+    ]
+  },
+  {
+    "title": "Western Woman",
+    "image": "avatar",
+    "subcategories": [
+      { "name": "Mobile Phones", "path": "/electronics/mobile-phones" },
+      { "name": "Laptops", "path": "/electronics/laptops" },
+      { "name": "Cameras", "path": "/electronics/cameras" }
+    ]
+  },
+  {
+    "title": "TV, Appliances",
+    "image": "avatar",
+    "subcategories": [
+      { "name": "Mobile Phones", "path": "/electronics/mobile-phones" },
+      { "name": "Laptops", "path": "/electronics/laptops" },
+      { "name": "Cameras", "path": "/electronics/cameras" }
+    ]
+  },
+  {
+    "title": "Baby Products",
+    "image": "avatar",
+    "subcategories": [
+      { "name": "Mobile Phones", "path": "/electronics/mobile-phones" },
+      { "name": "Laptops", "path": "/electronics/laptops" },
+      { "name": "Cameras", "path": "/electronics/cameras" }
+    ]
+  },
+  {
+    "title": "Grocery Products",
+    "image": "avatar",
+    "subcategories": [
+      { "name": "Mobile Phones", "path": "/electronics/mobile-phones" },
+      { "name": "Laptops", "path": "/electronics/laptops" },
+      { "name": "Cameras", "path": "/electronics/cameras" }
+    ]
+  },
+  {
+    "title": "Beauty & Health Products",
+    "image": "avatar",
+    "subcategories": [
+      { "name": "Mobile Phones", "path": "/electronics/mobile-phones" },
+      { "name": "Laptops", "path": "/electronics/laptops" },
+      { "name": "Cameras", "path": "/electronics/cameras" }
+    ]
+  },
+  {
+    "title": "Industrial Products",
+    "image": "avatar",
+    "subcategories": [
+      { "name": "Mobile Phones", "path": "/electronics/mobile-phones" },
+      { "name": "Laptops", "path": "/electronics/laptops" },
+      { "name": "Cameras", "path": "/electronics/cameras" }
+    ]
+  },
+  {
+    "title": "Club Sports",
+   "image": "avatar",
+    "subcategories": [
+      { "name": "Mobile Phones", "path": "/electronics/mobile-phones" },
+      { "name": "Laptops", "path": "/electronics/laptops" },
+      { "name": "Cameras", "path": "/electronics/cameras" }
+    ]
+  },
+  {
+    "title": "Car & Motorbike Products",
+   "image": "avatar",
+    "subcategories": [
+      { "name": "Mobile Phones", "path": "/electronics/mobile-phones" },
+      { "name": "Laptops", "path": "/electronics/laptops" },
+      { "name": "Cameras", "path": "/electronics/cameras" }
+    ]
+  }
+]
+
+
