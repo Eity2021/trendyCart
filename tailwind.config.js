@@ -25,7 +25,8 @@ module.exports = {
     'loginHeadingColor':'#6d6c6c',
     'loginBg':'rgba(255, 96, 0, 0.659)',
     'buttonHover':'#222',
-    'textButtonColor':'#727272'
+    'textButtonColor':'#727272',
+    'overlapColor': '#282b30'
   },
  }
   },

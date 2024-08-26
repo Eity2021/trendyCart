@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-
+import React, { useState ,useEffect} from "react";
+import { useLocation } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import LeftArrow from "../../../../components/svg/LeftArrow";
 import RightArrow from "../../../../components/svg/RightArrow";
@@ -109,7 +109,7 @@ const departments = [
 export default function CategoryDropDown() {
   const [hoveredDepartment, setHoveredDepartment] = useState(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(true);
-
+  const location = useLocation();
   const handleMouseEnter = (index) => {
     setHoveredDepartment(index);
   };
@@ -121,6 +121,17 @@ export default function CategoryDropDown() {
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+  // Update isDropdownOpen based on the current path
+  useEffect(() => {
+    if (location.pathname === '/') {
+      setIsDropdownOpen(true);
+    } else {
+      setIsDropdownOpen(false);
+    }
+  }, [location.pathname]);
+
+
+
 
   return (
     <div className="relative">
@@ -168,7 +179,7 @@ export default function CategoryDropDown() {
                     <Link
                       to={subcategory.path}
                       key={subIndex}
-                      className="block p-2 hover:bg-gray-200 text-gray-700"
+                      className="block p-2 text-sm text-black  font-normal"
                     >
                       {subcategory.name}
                     </Link>
