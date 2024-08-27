@@ -16,7 +16,7 @@ export default function LoginForm() {
           </h1>
 
           <div
-            className=" bg-cover bg-center bg-loginBg  w-[750px]  mt-8"
+            className=" bg-cover bg-center bg-loginBg  md:w-[750px] w-full  mt-8"
             style={{ backgroundImage: `url(${myAccountBg})` }}
           >
             <div className="px-20 py-[83px]">

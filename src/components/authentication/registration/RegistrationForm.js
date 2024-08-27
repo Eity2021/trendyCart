@@ -16,13 +16,13 @@ export default function RegistrationForm() {
           </h1>
 
           <div
-            className=" bg-cover bg-center bg-loginBg  w-[750px]  mt-8"
+            className=" bg-cover bg-center bg-loginBg  [750px] w-full  mt-8"
             style={{ backgroundImage: `url(${myAccountBg})` }}
           >
             <div className="px-20 py-8">
               <SocialAuth></SocialAuth>
 
-              <div>
+              <div className="lg:px -0 px-4">
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div className="">
                     <label className="text-black  text-sm">FIRST NAME *</label>
@@ -72,7 +72,7 @@ export default function RegistrationForm() {
                 </div>
               </div>
 
-              <div className=" mt-8">
+              <div className=" mt-8 lg:px -0 px-4">
                 <div className="bg-loginColor text-white w-32 flex justify-center items-center hover:bg-buttonHover">
                   <button className="py-3 text-link">SIGN UP</button>
                 </div>

@@ -41,7 +41,7 @@ export default function CategoryDropDown() {
         <span className="pl-2 text-link text-black">ALL DEPARTMENT</span>
       </button>
       {isDropdownOpen && (
-        <div className="absolute top-20 left-0 mt-2 w-72  bg-white rounded-md shadow-lg z-10">
+        <div className="absolute top-20 left-0 mt-2 md:w-72 w-full bg-white rounded-md shadow-lg z-10">
           {departmentsData.map((department, index) => (
             <div
               key={index}

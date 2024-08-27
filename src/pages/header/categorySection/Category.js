@@ -10,8 +10,13 @@ export default function Category() {
       <div className="container ">
         <div className="grid lg:grid-cols-3  md:grid-cols-2 sm:grid-cols-2 grid-col-1">
           <div>
-            <CategoryDropDown />
-            <MobileCategoryDropdown />
+            <div className="hidden sm:block">
+              <CategoryDropDown />
+            </div>
+
+            <div className="block sm:hidden">
+              <MobileCategoryDropdown />
+            </div>
           </div>
           <SearchBar></SearchBar>
           <div className="lg:flex  hidden justify-end">

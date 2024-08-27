@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import departmentsData from "../DepartmentsData.json";
 import avatar from "../../../../assets/images/header/avatar.jpg";
 import Department from "../../../../components/svg/Department";
+import LeftArrow from "../../../../components/svg/LeftArrow";
+import RightArrow from "../../../../components/svg/RightArrow";
 export default function MobileCategoryDropdown() {
   const [openedDepartment, setOpenedDepartment] = useState(null);
 
@@ -30,7 +32,7 @@ console.log(isMobileDropdownOpen)
 
 {
     isMobileDropdownOpen && (
-        <div className="absolute top-20 left-0 mt-2 w-72 bg-white rounded-md shadow-lg ">
+        <div className="absolute top-20 left-0 mt-2 md:w-72 w-full   bg-white rounded-md shadow-lg ">
         {departmentsData.map((department, index) => (
           <div key={index} className="relative">
             <div
@@ -51,7 +53,7 @@ console.log(isMobileDropdownOpen)
               </div>
 
               <span className="text-sm text-black">
-                {openedDepartment === index ? "▲" : "▼"}
+                {openedDepartment === index ?            <LeftArrow /> :    <RightArrow />}
               </span>
             </div>
             {openedDepartment === index && department.subcategories && (
