@@ -9,11 +9,14 @@ export default function RightSideTopHeader() {
   const handleLogin = () => {
     navigate("/login");
   };
+  const handleRegistration = () => {
+    navigate("/registration");
+  };
   return (
     <div>
       <div className="flex  justify-center   gap-2">
         <Register></Register>
-        <div>
+        <div onClick={handleRegistration} className="cursor-pointer"  >
           <p className="text-sm text-text-paragraph"> Register</p>
         </div>
 

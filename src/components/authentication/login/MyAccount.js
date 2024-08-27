@@ -1,5 +1,5 @@
 import React from "react";
-import breadcrumbBg from "../../assets/images/login/breadcrumb_bg.jpg";
+import breadcrumbBg from "../../../assets/images/login/breadcrumb_bg.jpg";
 export default function MyAccount() {
   return (
     <div

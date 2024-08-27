@@ -3,13 +3,13 @@ import React from "react";
 export default function SocialAuth() {
   return (
     <div>
-      <div className="pt-8">
+      <div className="pt-0">
         <p className="text-center text-black ">
-          Welcome TrendyCart Please Login Your{" "}
-          <span className="text-loginColor">Account</span>
+          Welcome TrendyCart Please  {" "}
+          <span className="text-loginColor">Signup</span>
         </p>
       </div>
-      <div className="flex gap-4 mt-8 justify-center">
+      <div className="flex gap-4 mt-4 justify-center">
         <div className="bg-[#405f9f] text-white w-56     flex justify-center items-center hover:bg-buttonHover">
           <button className="py-3 text-link">Login with facebook</button>
         </div>

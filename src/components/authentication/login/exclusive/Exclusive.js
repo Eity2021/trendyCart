@@ -1,7 +1,7 @@
 import React from "react";
-import limitedOfferBg from "../../../assets/images/login/limited_offer_bg.jpg";
-import loginImage from "../../../assets/images/login/loginImage.png";
-import limitedOffer from "../../../assets/images/login/limited_offer_discount.png";
+import limitedOfferBg from "../../../../assets/images/login/limited_offer_bg.jpg";
+import loginImage from "../../../../assets/images/login/loginImage.png";
+import limitedOffer from "../../../../assets/images/login/limited_offer_discount.png";
 
 export default function Exclusive() {
   return (

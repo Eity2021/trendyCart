@@ -1,7 +1,7 @@
 import React from "react";
-import patternBg from "../../assets/images/login/pattern_bg.jpg";
-import myAccountBg from "../../assets/images/login/my_account_bg.png";
-import SocialAuth from "./SocialAuth";
+import patternBg from "../../../assets/images/login/pattern_bg.jpg";
+import myAccountBg from "../../../assets/images/login/my_account_bg.png";
+
 
 export default function LoginForm() {
   return (
@@ -19,8 +19,13 @@ export default function LoginForm() {
             className=" bg-cover bg-center bg-loginBg  w-[750px]  mt-8"
             style={{ backgroundImage: `url(${myAccountBg})` }}
           >
-            <div className="px-20 py-8">
-              <SocialAuth></SocialAuth>
+            <div className="px-20 py-[83px]">
+            <div className="pb-20">
+        <p className="text-center text-black ">
+          Welcome TrendyCart Please Login Your{" "}
+          <span className="text-loginColor">Account</span>
+        </p>
+      </div>
 
               <div>
                 <div className="">
@@ -61,19 +66,17 @@ export default function LoginForm() {
                   <div className="pt-6">
                     <small className="text-sm text-black pl-2 uppercase">
                       {" "}
-                      Remember me
+                    FORGOT PASSWORD
                     </small>
                   </div>
                 </div>
               </div>
 
-              <div className="flex gap-4 mt-8">
+              <div className=" mt-8">
                 <div className="bg-loginColor text-white w-32 flex justify-center items-center hover:bg-buttonHover">
                   <button className="py-3 text-link">LOGIN</button>
                 </div>
-                <div className="bg-white text-textButtonColor w-32 flex justify-center items-center hover:bg-buttonHover  hover:text-white">
-                  <button className="py-3 text-link">SIGN UP</button>
-                </div>
+               
               </div>
             </div>
           </div>

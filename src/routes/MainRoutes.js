@@ -1,11 +1,12 @@
 import { Suspense, lazy } from "react";
+import Registration from "../components/authentication/registration/Registration";
 
 
 const Home = lazy(() => import("../pages/home/Home"));
 const About = lazy(() => import("../pages/about"));
 const Contact = lazy(() => import("../pages/contact"));
 const Product = lazy(() => import("../pages/product"));
-const Login = lazy(() => import("../pages/login/Login"));
+const Login = lazy(() => import("../components/authentication/login/Login"));
 const MainRoutes = {
   path: "/",
   children: [
@@ -46,6 +47,14 @@ const MainRoutes = {
       element: (
         <Suspense fallback={<p>Loading...</p>}>
           <Login />
+        </Suspense>
+      ),
+    },
+    {
+      path: "registration",
+      element: (
+        <Suspense fallback={<p>Loading...</p>}>
+          <Registration />
         </Suspense>
       ),
     },
