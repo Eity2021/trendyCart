@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import Cart from "../../../components/svg/Cart";
 import WishList from "../../../components/svg/WishList";
 import Hamburger from "../../../components/svg/Hamburger";
+import Profile from "./Profile";
 
 export default function RightMainHeader({toggleSidebar}) {
-  console.log(toggleSidebar)
+
   return (
     <div className="flex ">
        
@@ -45,7 +46,7 @@ export default function RightMainHeader({toggleSidebar}) {
         </li>
         <li>
         <div>
-        <p className="text-link text-header font-bold">560.00 BDT</p>
+        <Profile></Profile>
         </div>
         </li>
       </ul>
