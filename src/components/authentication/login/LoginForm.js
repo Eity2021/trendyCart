@@ -43,7 +43,7 @@ export default function LoginForm() {
     >
       <div className="flex justify-center py-24 ">
         <div className="">
-          <h1 className="text-center text-4xl font-bold ">
+          <h1 className="text-center  md:text-4xl text-3xl   font-bold ">
             <span className="text-loginColor">LOGIN </span>/ REGISTER
           </h1>
 
@@ -51,7 +51,7 @@ export default function LoginForm() {
             className=" bg-cover bg-center bg-loginBg  md:w-[750px] w-full  mt-8"
             style={{ backgroundImage: `url(${myAccountBg})` }}
           >
-            <div className="px-20 py-[83px]">
+            <div className="md:px-20 px-4 py-[83px]">
               <div className="pb-20">
                 <p className="text-center text-black ">
                   Welcome TrendyCart Please Login Your{" "}

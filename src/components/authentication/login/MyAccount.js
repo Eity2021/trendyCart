@@ -7,7 +7,7 @@ export default function MyAccount() {
       style={{ backgroundImage: `url(${breadcrumbBg})` }}
     >
       <div className="py-[100px]">
-        <h1 className="text-center text-5xl uppercase font-bold">My-Account</h1>
+        <h1 className="text-center md:text-5xl text-3xl  uppercase font-bold">My-Account</h1>
         <div className=" flex justify-center">
           <div className="bg-white w-48 py-3 rounded-[100px] flex justify-center">
             <li className="text-center  text-link  text-loginHeadingColor list-none	">
