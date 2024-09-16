@@ -19,41 +19,41 @@ const MainRoutes = {
     {
       path: "/",
       element: (
-        <PublicRoutes>
+      
           <Suspense fallback={<p>Loading...</p>}>
             <Home />
           </Suspense>
-        </PublicRoutes>
+   
       ),
     },
     {
       path: "about",
       element: (
-        <PublicRoutes>
+       
           <Suspense fallback={<p>Loading...</p>}>
             <About />
           </Suspense>
-        </PublicRoutes>
+     
       ),
     },
     {
       path: "product",
       element: (
-        <PublicRoutes>
+       
           <Suspense fallback={<p>Loading...</p>}>
             <Product />
           </Suspense>
-        </PublicRoutes>
+        
       ),
     },
     {
       path: "contact",
       element: (
-        <PublicRoutes>
+     
           <Suspense fallback={<p>Loading...</p>}>
             <Contact />
           </Suspense>
-        </PublicRoutes>
+
       ),
     },
     {

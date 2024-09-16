@@ -9,6 +9,7 @@ export const apiSlice = createApi({
       if (token) {
         headers.set("Authorization", `Bearer ${token}`);
       }
+      console.log("Headers being sent:", headers);
       return headers;
     },
   }),

@@ -6,16 +6,16 @@ import Logout from "../../../components/svg/Logout";
 import { useGetUserQuery } from "../../../features/user/userApi";
 export default function Profile() {
   const [isOpen, setIsOpen] = useState(false);
-  // const { user } = useSelector((state) => state.user) || {};
-  // console.log( user)
 
   const {
     data:user,
     isLoading,
     isError,
     error
-  } = useGetUserQuery()
-  console.log( user)
+  } = useGetUserQuery();
+
+
+
   const dispatch = useDispatch();
 
   const navigate = useNavigate();
@@ -30,6 +30,7 @@ export default function Profile() {
   const logOut = () => {
      dispatch(userLoggedOut());
      localStorage.clear();
+     navigate('/login')
   };
 
   return (
@@ -60,10 +61,10 @@ export default function Profile() {
 </div>
 
 <div className="flex items-center">
-  <p className="text-sm text-text-paragraph">Marufa Akter Eity</p>
+  <p className="text-sm text-text-paragraph">{user?.data?.firstName + " " + user?.data?.lastName}</p>
 </div>
   </div>
-<div className="flex justify-center items-center cursor-pointer">
+<div className="flex justify-center items-center cursor-pointer"  onClick={logOut}>
  <Logout></Logout>
   </div>
             </div>

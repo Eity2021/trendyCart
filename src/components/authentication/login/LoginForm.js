@@ -7,7 +7,6 @@ import { useForm } from "react-hook-form";
 export default function LoginForm() {
   const [error, setError] = useState("");
   const [resLogin, { data, isLoading, error: loginError }] = useLoginMutation();
-  console.log("Access Token:", data);
 
   const navigate = useNavigate();
 

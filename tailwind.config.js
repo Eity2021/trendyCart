@@ -27,7 +27,9 @@ module.exports = {
     'loginBg':'rgba(255, 96, 0, 0.659)',
     'buttonHover':'#222',
     'textButtonColor':'#727272',
-    'overlapColor': '#282b30'
+    'overlapColor': '#282b30',
+    'productColor': '#6d6b6b',
+    'productBg': '#f7f7f5'
   },
  }
   },

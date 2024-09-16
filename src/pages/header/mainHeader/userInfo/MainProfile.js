@@ -1,8 +1,14 @@
 import React from 'react'
-import { useSelector } from "react-redux";
+
+import { useGetUserQuery } from "../../../../features/user/userApi";
 export default function MainProfile() {
-    const {user} = useSelector((state) => state.auth) || {} ;
-    console.log('user',user);
+  // const {
+  //   data:user,
+  //   isLoading,
+  //   isError,
+  //   error
+  // } = useGetUserQuery();
+  //   console.log('user',user);
   return (
     <div>MainProfile</div>
   )
