@@ -14,7 +14,7 @@ export default function SellingProductsImages() {
     <div>
  <div>
       <div className="flex justify-center mt-12">
-        <div className="flex gap-12 bg-productBg py-5 px-14 rounded-[100px]">
+        <div className="grid lg:grid-cols-4  grid-cols-2  lg:gap-12 gap-4 bg-productBg py-5 px-14 rounded-[100px]">
           {tabs.map((tab) => (
             <p
               key={tab}
