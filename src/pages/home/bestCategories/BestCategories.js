@@ -3,10 +3,10 @@ import BestCategoriesList from "./BestCategoriesList";
 
 export default function BestCategories() {
   return (
-    <div className='mt-"60px'>
+    <div className="mt-14">
       <div className="text-center">
-        <p className="text-loginColor  text-sm uppercase">Browser Categories</p>
-        <p className="text-4xl font-bold  text-header   uppercase">
+        <p className="text-loginColor  text-sm uppercase font-bold">Browser Categories</p>
+        <p className="text-4xl font-bold  text-header   uppercase pt-4">
           BROWSE best CATEGORIES
         </p>
       </div>

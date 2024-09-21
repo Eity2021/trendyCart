@@ -5,6 +5,7 @@ import HomeCards from "./homeCards/HomeCards";
 import SellingProducts from "./sellingProducts/SellingProducts";
 import Deals from "./deals/Deals";
 import BestCategories from "./bestCategories/BestCategories";
+import FTOProduct from "./ftoProduct/FTOProduct";
 export default function Home() {
   return (
     <div>
@@ -39,6 +40,9 @@ export default function Home() {
         </div>
         <div className="container"> 
           <BestCategories></BestCategories>
+        </div>
+        <div className="container"> 
+          <FTOProduct></FTOProduct>
         </div>
     </div>
   );
