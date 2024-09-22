@@ -6,8 +6,8 @@ import Category from './categorySection/Category';
 export default function Header() {
   return (
     <div>
-      <TopHeader></TopHeader>
-      <MainHeader></MainHeader>
+      <TopHeader></TopHeader> 
+      <MainHeader></MainHeader> 
       <Category></Category>
     </div>
   );

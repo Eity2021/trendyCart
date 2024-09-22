@@ -4,7 +4,7 @@ import cards2 from "../../../assets/images/home/cards2.jpg";
 import cards3 from "../../../assets/images/home/cards3.jpg";
 export default function HomeCards() {
   return (
-    <div className="my-[20px]  md:mx-6 mx-6">
+    <div className="">
    <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1  gap-6">
 
   <div className="border h-[85%] ">

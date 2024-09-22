@@ -11,7 +11,7 @@ export default function Home() {
     <div>
       <div
         className=" bg-cover bg-center"
-        style={{ backgroundImage: `url(${slider_bg})` }}
+      //  style={{ backgroundImage: `url(${slider_bg})` }}
       >
         <div className="container">
           <div className="md:mx-2  mx-2">
@@ -19,13 +19,14 @@ export default function Home() {
               <div></div>
               <div className="col-span-4">
                 <Banner></Banner>
-              </div>
+              </div> 
             </div>
           </div>
         </div>
       </div>
+ <div className="my-24">
+ <div className="">
       <div className="container">
-    <div>
     <HomeCards></HomeCards>
     </div>
         <div>
@@ -33,6 +34,7 @@ export default function Home() {
         </div>
 
       </div>
+ </div>
       <div className="bg-[#fcf0ee] py-[100px]">
           <div className="container">
           <Deals></Deals>

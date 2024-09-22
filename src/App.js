@@ -8,7 +8,7 @@ function App() {
   const routes = useRoutes([MainRoutes]);
   const authChecked = useAuthCheck();
   return (
-    <div>
+    <div className="bg-white">
       <div>
         {!authChecked ? (
           <div>

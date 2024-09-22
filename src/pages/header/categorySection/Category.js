@@ -6,7 +6,7 @@ import MobileCategoryDropdown from "./categoryDropDown/MobileCategoryDropdown";
 
 export default function Category() {
   return (
-    <div className="bg-bgAshColor ">
+    <div className="bg-bgAshColor">
       <div className="container ">
         <div className="grid lg:grid-cols-3  md:grid-cols-2 sm:grid-cols-2 grid-col-1">
           <div>
