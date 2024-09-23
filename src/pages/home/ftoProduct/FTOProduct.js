@@ -4,11 +4,11 @@ import FTOTopRatedProduct from "./FTOTopRatedProduct";
 import FTOSaleProduct from "./FTOSaleProduct";
 export default function FTOProduct() {
   return (
-    <div className="">
+    <div className="mb-16  ">
       <div className="grid grid-cols-3 gap-8">
         <div>
-          <div className="flex justify-between">
-            <p className="text-lg font-bold  text-header    pb-2">
+          <div className="flex justify-between border-b mb-4">
+            <p className="text-lg font-bold  text-header pb-2">
               Featured Products
             </p>
             <button className="text-sm text-loginColor">View All</button>
@@ -18,8 +18,8 @@ export default function FTOProduct() {
           </div>
         </div>
         <div>
-          <div className="flex justify-between">
-            <p className="text-lg font-bold  text-header    pb-2">
+          <div className="flex justify-between border-b mb-4">
+            <p className="text-lg font-bold  text-header  pb-2">
               Top Rated Products
             </p>
             <button className="text-sm text-loginColor">View All</button>
@@ -29,7 +29,7 @@ export default function FTOProduct() {
           </div>
         </div>
         <div>
-          <div className="flex justify-between">
+          <div className="flex justify-between border-b mb-4">
             <p className="text-lg font-bold  text-header    pb-2">
               On Sale Products
             </p>
