@@ -3,13 +3,15 @@ import dealImage from "../../../assets/images/home/dealImage.jpeg";
 export default function BestCategoriesList() {
   return (
     <div className="mx-6  mt-14 mb-20 ">
-      <div className="grid grid-cols-6 gap-8">
-        <div>
-          <img
+      <div className="grid grid-cols-6 gap-2">
+        <div >
+         <div className="flex justify-center"> 
+         <img
             src={dealImage}
             alt=""
-            className=" w-full  h-[220px]  rounded-full"
+            className=" w-[180px]  h-[180px]  rounded-full "
           />
+         </div>
 
           <div className="pt-4">
             <h2 className="text-medium text-black font-bold text-center  uppercase hover:text-loginColor">
@@ -22,11 +24,15 @@ export default function BestCategoriesList() {
         </div>
 
         <div className="">
-          <img
+        <div className="flex justify-center"> 
+         <img
             src={dealImage}
             alt=""
-            className=" w-full  h-[220px]   border rounded-full"
+            className=" w-[180px]  h-[180px]  rounded-full "
           />
+         </div>
+
+
           <div className="pt-4">
             <h2 className="text-medium text-black font-bold text-center uppercase hover:text-loginColor">
               Fashion Party Dress
@@ -38,11 +44,13 @@ export default function BestCategoriesList() {
         </div>
 
         <div>
-          <img
+   <div className="flex justify-center"> 
+         <img
             src={dealImage}
             alt=""
-            className=" w-full  h-[220px]    border rounded-full"
+            className=" w-[180px]  h-[180px]  rounded-full "
           />
+         </div>
 
           <div className="pt-4">
             <h2 className="text-medium text-black font-bold text-center  uppercase hover:text-loginColor">
@@ -54,11 +62,13 @@ export default function BestCategoriesList() {
           </div>
         </div>
         <div>
-          <img
+        <div className="flex justify-center"> 
+         <img
             src={dealImage}
             alt=""
-            className="    w-full  h-[220px]   border rounded-full"
+            className=" w-[180px]  h-[180px]  rounded-full "
           />
+         </div>
 
           <div className="pt-4">
             <h2 className="text-medium text-black font-bold text-center uppercase hover:text-loginColor">
@@ -70,11 +80,13 @@ export default function BestCategoriesList() {
           </div>
         </div>
         <div>
-          <img
+        <div className="flex justify-center"> 
+         <img
             src={dealImage}
             alt=""
-            className=" w-full  h-[220px]   border rounded-full"
+            className=" w-[180px]  h-[180px]  rounded-full "
           />
+         </div>
 
           <div className="pt-4">
             <h2 className="text-medium text-black font-bold text-center  uppercase hover:text-loginColor">
@@ -87,12 +99,13 @@ export default function BestCategoriesList() {
         </div>
 
         <div>
-          <img
+        <div className="flex justify-center"> 
+         <img
             src={dealImage}
             alt=""
-            className=" w-full  h-[220px]    border rounded-full"
+            className=" w-[180px]  h-[180px]  rounded-full "
           />
-
+         </div>
           <div className="pt-4">
             <h2 className="text-medium text-black font-bold text-center  uppercase hover:text-loginColor">
               hair removal
