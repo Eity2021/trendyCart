@@ -29,7 +29,8 @@ module.exports = {
     'textButtonColor':'#727272',
     'overlapColor': '#282b30',
     'productColor': '#6d6b6b',
-    'productBg': '#f7f7f5'
+    'productBg': '#f7f7f5',
+    'bgPink':'#fcf0ee'
   },
  }
   },
