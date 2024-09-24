@@ -3,7 +3,7 @@ import dealImage from "../../../assets/images/home/dealImage.jpeg";
 export default function BestCategoriesList() {
   return (
     <div className="mx-6  mt-14 mb-20 ">
-      <div className="grid grid-cols-6 gap-2">
+      <div className="grid lg:grid-cols-6   md:grid-cols-3 grid-cols-1  gap-2">
         <div >
          <div className="flex justify-center"> 
          <img
@@ -27,7 +27,7 @@ export default function BestCategoriesList() {
         <div className="flex justify-center"> 
          <img
             src={dealImage}
-            alt=""
+            alt="dealImage"
             className=" w-[180px]  h-[180px]  rounded-full "
           />
          </div>

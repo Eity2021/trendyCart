@@ -11,13 +11,13 @@ export default function Home() {
     <div>
       <div
         className=" bg-cover bg-center"
-      //  style={{ backgroundImage: `url(${slider_bg})` }}
+       style={{ backgroundImage: `url(${slider_bg})` }}
       >
         <div className="container">
           <div className="md:mx-2  mx-2">
-            <div className="grid grid-cols-5 gap-4">
+            <div className="grid  xl:grid-cols-5   grid-cols-1  gap-4">
               <div></div>
-              <div className="col-span-4">
+              <div className="lg:col-span-4">
                 <Banner></Banner>
               </div> 
             </div>

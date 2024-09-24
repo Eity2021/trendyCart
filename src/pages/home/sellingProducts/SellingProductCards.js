@@ -5,7 +5,7 @@ export default function SellingProductCards() {
   return (
     <div>
       <div>
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 lg:px-48  md:px-28 px-16 py-16">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2   sm:grid-cols-2  grid-cols-1 gap-6  xl:px-48   lg:px-4  md:px-28 px-14 py-16">
             {/* part 1 */}
           <div className="">
             <div className="relative group">

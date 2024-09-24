@@ -4,8 +4,8 @@ import FTOTopRatedProduct from "./FTOTopRatedProduct";
 import FTOSaleProduct from "./FTOSaleProduct";
 export default function FTOProduct() {
   return (
-    <div className="mb-16  ">
-      <div className="grid grid-cols-3 gap-8">
+    <div className="mb-16  md:mx-2 mx-4">
+      <div className="grid lg:grid-cols-3   md:grid-cols-2 grid-cols-1    gap-8">
         <div>
           <div className="flex justify-between border-b mb-4">
             <p className="text-lg font-bold  text-header pb-2">

@@ -9,7 +9,7 @@ export default function MainHeader() {
     setIsOpen(!isOpen);
   };
   return (
-    <div className=" py-[30px]  xl:px-0  px-4">
+    <div className=" py-[30px]  xl:px-0  mx-4">
       <div className="flex  justify-between container">
         <LeftMainHeader></LeftMainHeader>
         <div>
