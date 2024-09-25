@@ -6,7 +6,7 @@ export default function BestCategories() {
     <div className="mt-14 border-b mb-16">
       <div className="text-center">
         <p className="text-loginColor  text-sm uppercase font-bold">Browser Categories</p>
-        <h2 className="text-4xl font-bold  text-header   uppercase pt-4">
+        <h2 className="md:text-4xl text-2xl font-bold  text-header   uppercase pt-4">
           BROWSE Best CATEGORIES
         </h2>
       </div>

@@ -23,7 +23,7 @@ export default function DealsProductsList() {
             disableOnInteraction: false,
           }}
           breakpoints={{
-            640: {
+            320: {
               slidesPerView: 1,
               spaceBetween: 20,
             },
@@ -42,7 +42,7 @@ export default function DealsProductsList() {
         >
           <SwiperSlide>
             <div className="">
-              <div className="w-[193px] h-[178px] my-8  ">
+              <div className="md:w-[193px] md:h-[178px]   w-full  h-full my-8  ">
                 <img src={dealImage} alt="dealImage" />
               </div>
 
