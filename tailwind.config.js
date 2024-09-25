@@ -30,7 +30,9 @@ module.exports = {
     'overlapColor': '#282b30',
     'productColor': '#6d6b6b',
     'productBg': '#f7f7f5',
-    'bgPink':'#fcf0ee'
+    'bgPink':'#fcf0ee',
+    'gray-bg' : "#fefcfc",
+    'gray-tw' : "#f2f1ef"
   },
  }
   },
