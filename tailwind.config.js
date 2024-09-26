@@ -40,7 +40,7 @@ module.exports = {
     themes: [
       {
         Kompass: {
-          primary: "#12a9b2",
+          primary: "#ff6000",
           secondary: "#149999",
           accent: "#3A4256",
           neutral: "#647393",
