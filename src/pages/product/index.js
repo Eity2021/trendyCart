@@ -4,6 +4,9 @@ import ProductCategories from "./ProductCategories";
 import AllProduct from "./AllProduct";
 import SmartShop from "./SmartShop";
 import FilterByPrice from "./FilterByPrice";
+import NewProduct from "./NewProduct";
+import ProductBrand from "./ProductBrand";
+import ProductImage from "./ProductImage";
 
 export default function Product() {
   const { data: products, isLoading, isError, error } = useGetProductsQuery();
@@ -20,6 +23,9 @@ export default function Product() {
             <div>
               <ProductCategories></ProductCategories>
               <FilterByPrice></FilterByPrice>
+              <NewProduct></NewProduct>
+              <ProductBrand></ProductBrand>
+              <ProductImage></ProductImage>
             </div>
             <div className="col-span-3">
               <AllProduct></AllProduct>
