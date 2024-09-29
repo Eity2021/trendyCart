@@ -1,6 +1,7 @@
 import { Suspense, lazy } from "react";
 import PrivateRoutes from "../components/routes/PrivateRoutes";
 import PublicRoutes from "../components/routes/PublicRoutes";
+const SingleProduct = lazy(() => import("../pages/singleProduct"));
 const Home = lazy(() => import("../pages/home/Home"));
 const About = lazy(() => import("../pages/about"));
 const Contact = lazy(() => import("../pages/contact"));
@@ -81,6 +82,14 @@ const MainRoutes = {
       element: (
         <Suspense fallback={<p>Loading...</p>}>
           <MainProfile />
+        </Suspense>
+      ),
+    },
+    {
+      path: "ProductDetails",
+      element: (
+        <Suspense fallback={<p>Loading...</p>}>
+          <SingleProduct />
         </Suspense>
       ),
     },

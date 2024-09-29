@@ -32,7 +32,8 @@ module.exports = {
     'productBg': '#f7f7f5',
     'bgPink':'#fcf0ee',
     'gray-bg' : "#fefcfc",
-    'gray-tw' : "#f2f1ef"
+    'gray-tw' : "#f2f1ef",
+    'productPageBg' :'#f6f3f1'
   },
  }
   },

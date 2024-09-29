@@ -7,6 +7,7 @@ import FilterByPrice from "./FilterByPrice";
 import NewProduct from "./NewProduct";
 import ProductBrand from "./ProductBrand";
 import ProductImage from "./ProductImage";
+import Pagination from "./Pagination";
 
 export default function Product() {
   const { data: products, isLoading, isError, error } = useGetProductsQuery();
@@ -29,6 +30,7 @@ export default function Product() {
             </div>
             <div className="col-span-3">
               <AllProduct></AllProduct>
+              <Pagination></Pagination>
             </div>
           </div>
         </div>
