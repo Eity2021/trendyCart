@@ -1,4 +1,5 @@
 import { Suspense, lazy } from "react";
+import HashLoader from "react-spinners/HashLoader";
 import PrivateRoutes from "../components/routes/PrivateRoutes";
 import PublicRoutes from "../components/routes/PublicRoutes";
 const SingleProduct = lazy(() => import("../pages/singleProduct"));
@@ -20,48 +21,70 @@ const MainRoutes = {
     {
       path: "/",
       element: (
-      
-          <Suspense fallback={<p>Loading...</p>}>
-            <Home />
-          </Suspense>
-   
+        <Suspense
+          fallback={
+            <div className="h-screen  flex justify-center items-center">
+              <HashLoader color="#f7ba01" />
+            </div>
+          }
+        >
+          <Home />
+        </Suspense>
       ),
     },
     {
       path: "about",
       element: (
-       
-          <Suspense fallback={<p>Loading...</p>}>
-            <About />
-          </Suspense>
-     
+        <Suspense
+          fallback={
+            <div className="h-screen  flex justify-center items-center">
+              <HashLoader color="#f7ba01" />
+            </div>
+          }
+        >
+          <About />
+        </Suspense>
       ),
     },
     {
       path: "product",
       element: (
-       
-          <Suspense fallback={<p>Loading...</p>}>
-            <Product />
-          </Suspense>
-        
+        <Suspense
+          fallback={
+            <div className="h-screen  flex justify-center items-center">
+              <HashLoader color="#f7ba01" />
+            </div>
+          }
+        >
+          <Product />
+        </Suspense>
       ),
     },
     {
       path: "contact",
       element: (
-     
-          <Suspense fallback={<p>Loading...</p>}>
-            <Contact />
-          </Suspense>
-
+        <Suspense
+          fallback={
+            <div className="h-screen  flex justify-center items-center">
+              <HashLoader color="#f7ba01" />
+            </div>
+          }
+        >
+          <Contact />
+        </Suspense>
       ),
     },
     {
       path: "login",
       element: (
         <PublicRoutes>
-          <Suspense fallback={<p>Loading...</p>}>
+          <Suspense
+            fallback={
+              <div className="h-screen  flex justify-center items-center">
+                <HashLoader color="#f7ba01" />
+              </div>
+            }
+          >
             <Login />
           </Suspense>
         </PublicRoutes>
@@ -71,7 +94,13 @@ const MainRoutes = {
       path: "registration",
       element: (
         <PublicRoutes>
-          <Suspense fallback={<p>Loading...</p>}>
+          <Suspense
+            fallback={
+              <div className="h-screen  flex justify-center items-center">
+                <HashLoader color="#f7ba01" />
+              </div>
+            }
+          >
             <Registration />
           </Suspense>
         </PublicRoutes>
@@ -80,7 +109,13 @@ const MainRoutes = {
     {
       path: "profile",
       element: (
-        <Suspense fallback={<p>Loading...</p>}>
+        <Suspense
+          fallback={
+            <div className="h-screen  flex justify-center items-center">
+              <HashLoader color="#f7ba01" />
+            </div>
+          }
+        >
           <MainProfile />
         </Suspense>
       ),
@@ -88,7 +123,13 @@ const MainRoutes = {
     {
       path: "ProductDetails",
       element: (
-        <Suspense fallback={<p>Loading...</p>}>
+        <Suspense
+          fallback={
+            <div className="h-screen  flex justify-center items-center">
+              <HashLoader color="#f7ba01" />
+            </div>
+          }
+        >
           <SingleProduct />
         </Suspense>
       ),
