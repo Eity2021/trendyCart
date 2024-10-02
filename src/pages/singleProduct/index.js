@@ -28,7 +28,7 @@ export default function SingleProduct() {
       </div>
       <div className="my-20 xl:mx-64 lg:mx-40 md:mx-20 mx-8 ">
         <div className="container">
-          <div className="grid grid-cols-2">
+          <div className="grid lg:grid-cols-2 grid-cols-1  ">
             <SIngleProductImage></SIngleProductImage>
             <SingleProductDetails></SingleProductDetails>
           </div>

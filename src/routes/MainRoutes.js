@@ -3,6 +3,7 @@ import HashLoader from "react-spinners/HashLoader";
 import PrivateRoutes from "../components/routes/PrivateRoutes";
 import PublicRoutes from "../components/routes/PublicRoutes";
 const SingleProduct = lazy(() => import("../pages/singleProduct"));
+const WishList = lazy(() => import("../pages/wishList"));
 const Home = lazy(() => import("../pages/home/Home"));
 const About = lazy(() => import("../pages/about"));
 const Contact = lazy(() => import("../pages/contact"));
@@ -131,6 +132,20 @@ const MainRoutes = {
           }
         >
           <SingleProduct />
+        </Suspense>
+      ),
+    },
+    {
+      path: "wishList",
+      element: (
+        <Suspense
+          fallback={
+            <div className="h-screen  flex justify-center items-center">
+              <HashLoader color="#f7ba01" />
+            </div>
+          }
+        >
+          <WishList />
         </Suspense>
       ),
     },

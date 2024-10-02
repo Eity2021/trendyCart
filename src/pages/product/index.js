@@ -8,6 +8,7 @@ import NewProduct from "./NewProduct";
 import ProductBrand from "./ProductBrand";
 import ProductImage from "./ProductImage";
 import Pagination from "./Pagination";
+import Exclusive from "../../components/authentication/login/exclusive/Exclusive";
 
 export default function Product() {
   const { data: products, isLoading, isError, error } = useGetProductsQuery();
@@ -35,6 +36,9 @@ export default function Product() {
           </div>
         </div>
       </div>
+      <div>
+<Exclusive></Exclusive>
+        </div>
     </div>
   );
 }
