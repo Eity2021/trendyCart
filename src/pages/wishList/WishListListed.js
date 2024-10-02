@@ -1,4 +1,5 @@
 import React from "react";
+import Delete from "../../components/svg/Delete";
 
 export default function WishListListed() {
   const products = [
@@ -32,16 +33,26 @@ export default function WishListListed() {
       image: 3,
       stock: "Stock Out",
     },
+    {
+      id: 4,
+      name: "Woman Lathers Jacket",
+      description: "Cramond Leopard & Pythong Anorak",
+      price: "250",
+      quantity: 3,
+      subTotal: 800,
+      image: 3,
+      stock: "Stock Out",
+    },
   ];
   return (
     <div>
       <div>
         <div className="p-4">
-          {/* Table Container */}
           <div className="overflow-x-auto overflow-y-auto ">
-            <table className="min-w-full table-auto ">
+            <table className="w-[100%] table-auto ">
               <thead className="">
                 <tr className="border-t-[1px]">
+                  <th className="px-4 py-2 border-b  pt-8 pb-8 "></th>
                   <th className="px-4 py-2 border-b  pt-8 pb-8 ">Product</th>
                   <th className="px-4 py-2 border-b  pt-8 pb-8 text-left">
                     Price
@@ -61,7 +72,12 @@ export default function WishListListed() {
               <tbody>
                 {products.map((product) => (
                   <tr key={product.id}>
-                    <td className="px-4 py-2 border-b pt-4 pb-4">
+                    <td className="border-b">
+                      <div className="cursor-pointer">
+                        <Delete></Delete>
+                      </div>
+                    </td>
+                    <td className="px-4 py-2 border-b pt-4 pb-4 ">
                       <div className="flex gap-2">
                         <img
                           src={product.image}
