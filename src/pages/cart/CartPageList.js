@@ -1,5 +1,4 @@
 import React from "react";
-
 import CartProduct from "./CartProduct";
 import CartCalculation from "./CartCalculation";
 export default function CartPageList() {

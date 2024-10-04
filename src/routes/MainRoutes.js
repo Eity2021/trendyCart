@@ -2,6 +2,7 @@ import { Suspense, lazy } from "react";
 import HashLoader from "react-spinners/HashLoader";
 import PrivateRoutes from "../components/routes/PrivateRoutes";
 import PublicRoutes from "../components/routes/PublicRoutes";
+import CheckOut from "../pages/checkOut";
 const SingleProduct = lazy(() => import("../pages/singleProduct"));
 const WishList = lazy(() => import("../pages/wishList"));
 const Cart = lazy(() => import("../pages/cart"));
@@ -164,6 +165,23 @@ const MainRoutes = {
         </Suspense>
       ),
     },
+    {
+      path: "checkout",
+      element: (
+        <Suspense
+          fallback={
+            <div className="h-screen  flex justify-center items-center">
+              <HashLoader color="#f7ba01" />
+            </div>
+          }
+        >
+          <CheckOut />
+        </Suspense>
+      ),
+    },
+
+
+    
   ],
 };
 

@@ -1,17 +1,20 @@
 import React from "react";
-import CartPageList from "./CartPageList";
 import breadcrumbBg from "../../assets/images/about/breadcrumb_bg.jpg";
-export default function Cart() {
+import CheckoutForm from "./CheckoutForm";
+import CheckoutCalculation from "./CheckoutCalculation";
+import ShippingInfo from "./ShippingInfo";
+import Exclusive from "../../components/authentication/login/exclusive/Exclusive";
+export default function CheckOut() {
   return (
     <div>
       <div
         className=" bg-cover bg-center"
         style={{ backgroundImage: `url(${breadcrumbBg})` }}
       >
-        <div className="py-[100px] ">
+        <div className="py-[100px]">
           <p className="uppercase text-5xl  font-bold text-header  font-poppins text-center">
             {" "}
-            Shopping Cart
+            Shopping Checkout
           </p>
           <div className="flex justify-center">
             <div>
@@ -20,15 +23,27 @@ export default function Cart() {
               </span>{" "}
               <span className="px-2"> | </span>{" "}
               <span className="text-medium text-loginColor  font-medium">
-                Shopping Cart
+                Checkout
               </span>
             </div>
           </div>
         </div>
       </div>
-
       <div className="container">
-        <CartPageList></CartPageList>
+        <div className="grid grid-cols-3 gap-6 pb-16 border-b mt-20">
+          <div className="col-span-2">
+            <CheckoutForm></CheckoutForm>
+          </div>
+          <div>
+            <CheckoutCalculation></CheckoutCalculation>
+          </div>
+        </div>
+        <div>
+          <ShippingInfo></ShippingInfo>
+        </div>
+      </div>
+      <div>
+        <Exclusive></Exclusive>
       </div>
     </div>
   );
