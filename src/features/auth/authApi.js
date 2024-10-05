@@ -18,14 +18,14 @@ export const authApi = apiSlice.injectEndpoints({
             "auth",
             JSON.stringify({
               accessToken: result.data.data.access.token,
-              user: result.data.data.user,
+              // user: result.data.data.user,
             })
           );
 
           dispatch(
             userLoggedIn({
               accessToken: result.data.data.access.token,
-              user: result.data.data.user,
+              // user: result.data.data.user,
             })
           );
         } catch (err) {
@@ -48,14 +48,14 @@ export const authApi = apiSlice.injectEndpoints({
             "auth",
             JSON.stringify({
               accessToken: result.data.data.access.token,
-              user: result.data.data.user,
+              // user: result.data.data.user,
             })
           );
 
           dispatch(
             userLoggedIn({
               accessToken: result.data.data.access.token,
-              user: result.data.data.user,
+              // user: result.data.data.user,
             })
           );
         } catch (err) {

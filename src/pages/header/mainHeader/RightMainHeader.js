@@ -5,7 +5,7 @@ import WishList from "../../../components/svg/WishList";
 import Hamburger from "../../../components/svg/Hamburger";
 import Profile from "./Profile";
 import HeaderCart from "../../headerCart/HeaderCart";
-
+import { useGetUserQuery } from "../../../features/user/userApi";
 export default function RightMainHeader({ toggleSidebar }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -17,6 +17,15 @@ export default function RightMainHeader({ toggleSidebar }) {
   const handleMouseLeave = () => {
     setIsOpen(false);
   };
+
+  const {
+    data:user,
+    isLoading,
+    isError,
+    error
+  } = useGetUserQuery();
+
+console.log(user)
   return (
     <div className="flex ">
       <ul className="hidden md:flex  gap-8">
@@ -62,7 +71,12 @@ export default function RightMainHeader({ toggleSidebar }) {
         </li>
         <li>
           <div>
-            <Profile></Profile>
+            {
+              user && (
+
+                <Profile user={user}></Profile>
+              )
+            }
           </div>
         </li>
       </ul>

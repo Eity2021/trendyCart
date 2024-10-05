@@ -1,18 +1,12 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { userLoggedOut } from "../../../features/auth/authSlice";
 import Logout from "../../../components/svg/Logout";
-import { useGetUserQuery } from "../../../features/user/userApi";
-export default function Profile() {
+
+export default function Profile({user}) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const {
-    data:user,
-    isLoading,
-    isError,
-    error
-  } = useGetUserQuery();
 
 
 

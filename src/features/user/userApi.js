@@ -12,3 +12,6 @@ export const userApi = apiSlice.injectEndpoints({
 });
 
 export const {useGetUserQuery } = userApi;
+
+
+
