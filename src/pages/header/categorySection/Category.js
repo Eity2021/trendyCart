@@ -3,8 +3,16 @@ import FreeShipping from "./freeShip/FreeShipping";
 import SearchBar from "./search/SearchBar";
 import CategoryDropDown from "./categoryDropDown/CategoryDropDown";
 import MobileCategoryDropdown from "./categoryDropDown/MobileCategoryDropdown";
+import { useGetCategoryQuery } from "../../../features/category/CategoriesApi";
 
 export default function Category() {
+
+  const {data:category, isLoading,isError,error} = useGetCategoryQuery();
+
+
+  console.log("category", category)
+
+
   return (
     <div className="bg-bgAshColor">
       <div className="container ">

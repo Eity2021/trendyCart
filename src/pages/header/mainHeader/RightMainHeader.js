@@ -18,14 +18,9 @@ export default function RightMainHeader({ toggleSidebar }) {
     setIsOpen(false);
   };
 
-  const {
-    data:user,
-    isLoading,
-    isError,
-    error
-  } = useGetUserQuery();
+  const {data:user, isLoading,isError,error} = useGetUserQuery();
 
-console.log(user)
+console.log("user",user)
   return (
     <div className="flex ">
       <ul className="hidden md:flex  gap-8">

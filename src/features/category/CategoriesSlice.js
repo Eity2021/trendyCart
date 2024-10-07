@@ -3,8 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = [];
 
-const userSlice = createSlice({
-    name:'user',
+const categorySlice = createSlice({
+    name:'category',
     initialState,
     reducers:{
         // userInfo: (state, action) => {
@@ -13,4 +13,4 @@ const userSlice = createSlice({
     }
 })
 
-export const {} = userSlice.actions;
+export const {} = categorySlice.actions;

@@ -83,7 +83,7 @@ const MainRoutes = {
     {
       path: "login",
       element: (
-        <PublicRoutes>
+        // <PublicRoutes>
           <Suspense
             fallback={
               <div className="h-screen  flex justify-center items-center">
@@ -93,7 +93,7 @@ const MainRoutes = {
           >
             <Login />
           </Suspense>
-        </PublicRoutes>
+        // </PublicRoutes>
       ),
     },
     {
