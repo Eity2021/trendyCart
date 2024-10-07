@@ -13,11 +13,13 @@ const authSlice = createSlice({
       state.accessToken = action.payload.accessToken;
       // state.user = action.payload.user;
     },
+
     userLoggedOut: (state) => {
       state.accessToken = undefined;
       // state.user = undefined;
     },
   },
+  
 });
 
 export const { userLoggedIn, userLoggedOut } = authSlice.actions;
