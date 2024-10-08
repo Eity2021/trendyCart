@@ -18,9 +18,11 @@ export default function RightMainHeader({ toggleSidebar }) {
     setIsOpen(false);
   };
 
-  const {data:user, isLoading,isError,error} = useGetUserQuery();
+  const { data: user, isLoading, isError, error } = useGetUserQuery();
+  console.log("user", user);
 
-console.log("user",user)
+
+  
   return (
     <div className="flex ">
       <ul className="hidden md:flex  gap-8">
@@ -65,14 +67,7 @@ console.log("user",user)
           )}
         </li>
         <li>
-          <div>
-            {
-              user && (
-
-                <Profile user={user}></Profile>
-              )
-            }
-          </div>
+          <div>{user && <Profile user={user}></Profile>}</div>
         </li>
       </ul>
       <div className="md:hidden pl-2">

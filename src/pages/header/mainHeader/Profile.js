@@ -4,11 +4,8 @@ import { useDispatch } from "react-redux";
 import { userLoggedOut } from "../../../features/auth/authSlice";
 import Logout from "../../../components/svg/Logout";
 
-export default function Profile({user}) {
+export default function Profile({ user }) {
   const [isOpen, setIsOpen] = useState(false);
-
-
-
 
   const dispatch = useDispatch();
 
@@ -22,9 +19,9 @@ export default function Profile({user}) {
   };
 
   const logOut = () => {
-     dispatch(userLoggedOut());
-     localStorage.clear();
-     navigate('/login')
+    dispatch(userLoggedOut());
+    localStorage.clear();
+    navigate("/login");
   };
 
   return (
@@ -46,24 +43,28 @@ export default function Profile({user}) {
           }`}
         >
           <div>
-           <div className="flex justify-between px-4 py-4" >
- <div className="flex gap-2">
- <div className="avatar">
-  <div className="w-10 rounded-full">
-    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-  </div>
-</div>
+            <div className="flex justify-between px-4 py-4">
+              <div className="flex gap-2">
+                <div className="avatar">
+                  <div className="w-10 rounded-full">
+                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  </div>
+                </div>
 
-<div className="flex items-center">
-  <p className="text-sm text-text-paragraph">{user?.data?.firstName + " " + user?.data?.lastName}</p>
-</div>
-  </div>
-<div className="flex justify-center items-center cursor-pointer"  onClick={logOut}>
- <Logout></Logout>
-  </div>
+                <div className="flex items-center">
+                  <p className="text-sm text-text-paragraph">
+                    {user?.data?.firstName + " " + user?.data?.lastName}
+                  </p>
+                </div>
+              </div>
+              <div
+                className="flex justify-center items-center cursor-pointer"
+                onClick={logOut}
+              >
+                <Logout></Logout>
+              </div>
             </div>
-
-            </div>
+          </div>
           <div
             className="py-1 "
             role="menu"

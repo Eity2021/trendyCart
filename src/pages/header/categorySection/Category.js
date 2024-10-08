@@ -10,7 +10,7 @@ export default function Category() {
   const {data:category, isLoading,isError,error} = useGetCategoryQuery();
 
 
-  console.log("category", category)
+  // console.log("category", category)
 
 
   return (
