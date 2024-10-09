@@ -9,10 +9,11 @@
 }
 
 body {
-  /* font-family: "Outfit", sans-serif; */
+  font-family: "Roboto", sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-weight: 500;
+
 }
 
 button,
