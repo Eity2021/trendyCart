@@ -3,8 +3,8 @@ import Star from "../../components/svg/Star";
 import ShopCart from "../../components/svg/ShopCart";
 import ShopWishList from "../../components/svg/ShopWishList";
 import ShopEye from "../../components/svg/ShopEye";
-export default function AllProductList({ data }) {
-  const { image, heading, amount, deleteAmount } = data;
+export default function AllProductList({ product }) {
+  const { image, title, amount, deleteAmount } = product;
   return (
     <div>
       <div className="">
@@ -31,7 +31,7 @@ export default function AllProductList({ data }) {
 
         <div className="mt-[14px]">
           <div className="text-center">
-            <p> {heading} </p>
+            <p> {title} </p>
             <div className="flex gap-2 justify-center pt-[6px]">
               <del className="text-sm text-text-paragraph">
                 {deleteAmount}

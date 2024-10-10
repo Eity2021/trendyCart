@@ -5,6 +5,7 @@ import LittleGrid from "../../components/svg/LittleGrid";
 import bestSell from "../../assets/images/home/bestSell.jpg";
 import featuredSale from "../../assets/images/home/featuredSale.png";
 import watchDeals from "../../assets/images/home/watchDeals.jpg";
+import { useGetProductsQuery } from "../../features/product/ProductApi";
 export default function AllProduct() {
   const dataArray = [
     {
@@ -134,7 +135,11 @@ export default function AllProduct() {
       deleteAmount: 140.85,
     },
   ];
+  const {data:products, isLoading,isError,error} = useGetProductsQuery();
 
+const AllProducts = products?.data?.products;
+
+  console.log("products",AllProducts)
   return (
     <div className="mb-10">
       <div className="flex justify-between">
@@ -167,9 +172,9 @@ export default function AllProduct() {
       </div>
 
       <div className="grid grid-cols-3 gap-10">
-        {dataArray.map((data) => (
-          <div key={data.id}>
-            <AllProductList data={data}></AllProductList>
+        {AllProducts?.map((product) => (
+          <div key={product._id}>
+            <AllProductList product={product}></AllProductList>
           </div>
         ))}
       </div>

@@ -5,9 +5,10 @@ import LeftArrow from "../../../../components/svg/LeftArrow";
 import RightArrow from "../../../../components/svg/RightArrow";
 import Department from "../../../../components/svg/Department";
 import avatar from "../../../../assets/images/header/avatar.jpg";
-import departmentsData from "../DepartmentsData.json";
 
-export default function CategoryDropDown() {
+export default function CategoryDropDown({ category }) {
+  const categories = category?.data;
+
   const [hoveredDepartment, setHoveredDepartment] = useState(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(true);
   const location = useLocation();
@@ -42,7 +43,7 @@ export default function CategoryDropDown() {
       </button>
       {isDropdownOpen && (
         <div className="absolute top-20 left-0 mt-2 md:w-72 w-full bg-white rounded-md shadow-lg z-10">
-          {departmentsData.map((department, index) => (
+          {categories?.map((departmentCategory, index) => (
             <div
               key={index}
               className="relative group"
@@ -58,32 +59,35 @@ export default function CategoryDropDown() {
                   </div>
                   <div>
                     <p className="text-sm text-black  font-normal">
-                      {department.title}
+                      {departmentCategory.name}
                     </p>
                   </div>
                 </div>
 
-                {department.subcategories &&
-                  department.subcategories.length > 0 &&
+                {departmentCategory.subCategories &&
+                  departmentCategory.subCategories.length > 0 &&
                   (hoveredDepartment === index ? (
                     <LeftArrow />
                   ) : (
                     <RightArrow />
                   ))}
               </div>
-              {hoveredDepartment === index && department.subcategories && (
-                <div className="absolute top-0 left-full w-48 bg-white rounded-md shadow-lg">
-                  {department.subcategories.map((subcategory, subIndex) => (
-                    <Link
-                      to={subcategory.path}
-                      key={subIndex}
-                      className="block p-2 text-sm text-black  font-normal"
-                    >
-                      {subcategory.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
+              {hoveredDepartment === index &&
+                departmentCategory.subCategories && (
+                  <div className="absolute top-0 left-full w-48 bg-white rounded-md shadow-lg">
+                    {departmentCategory.subCategories.map(
+                      (subcategory, subIndex) => (
+                        <Link
+                          to={subcategory.path}
+                          key={subIndex}
+                          className="block p-2 text-sm text-black  font-normal"
+                        >
+                          {subcategory.name}
+                        </Link>
+                      )
+                    )}
+                  </div>
+                )}
             </div>
           ))}
         </div>

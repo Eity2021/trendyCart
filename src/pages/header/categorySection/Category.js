@@ -9,21 +9,17 @@ export default function Category() {
 
   const {data:category, isLoading,isError,error} = useGetCategoryQuery();
 
-
-  // console.log("category", category)
-
-
   return (
     <div className="bg-bgAshColor">
       <div className="container ">
         <div className="grid lg:grid-cols-3  md:grid-cols-2 sm:grid-cols-2 grid-col-1">
           <div>
             <div className="hidden sm:block">
-              <CategoryDropDown />
+              <CategoryDropDown category={category} />
             </div>
 
             <div className="block sm:hidden">
-              <MobileCategoryDropdown />
+              <MobileCategoryDropdown  category={category} />
             </div>
           </div>
           <SearchBar></SearchBar>

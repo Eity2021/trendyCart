@@ -19,7 +19,6 @@ const authSlice = createSlice({
       // state.user = undefined;
     },
   },
-  
 });
 
 export const { userLoggedIn, userLoggedOut } = authSlice.actions;

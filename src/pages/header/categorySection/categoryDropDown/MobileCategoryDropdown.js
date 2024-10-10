@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import departmentsData from "../DepartmentsData.json";
 import avatar from "../../../../assets/images/header/avatar.jpg";
 import Department from "../../../../components/svg/Department";
 import LeftArrow from "../../../../components/svg/LeftArrow";
 import RightArrow from "../../../../components/svg/RightArrow";
-export default function MobileCategoryDropdown() {
+export default function MobileCategoryDropdown({ category }) {
+  const categories = category?.data;
+
   const [openedDepartment, setOpenedDepartment] = useState(null);
 
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(true);
@@ -30,11 +31,12 @@ export default function MobileCategoryDropdown() {
 
       {isMobileDropdownOpen && (
         <div className="absolute top-20 left-0 mt-2 md:w-72 w-full   bg-white rounded-md shadow-lg ">
-          {departmentsData.map((department, index) => (
+          {categories?.map((departmentCategory, index) => (
             <div key={index} className="relative">
               <div
                 className="p-[14.5px] bg-white hover:bg-gray-200 cursor-pointer flex items-center justify-between"
-                onClick={() => toggleDepartment(index)} >
+                onClick={() => toggleDepartment(index)}
+              >
                 <div className="flex items-center gap-2">
                   <div className="avatar">
                     <div className="w-6 rounded-full">
@@ -43,7 +45,7 @@ export default function MobileCategoryDropdown() {
                   </div>
                   <div>
                     <p className="text-sm text-black font-normal">
-                      {department.title}
+                      {departmentCategory.name}
                     </p>
                   </div>
                 </div>
@@ -51,19 +53,22 @@ export default function MobileCategoryDropdown() {
                   {openedDepartment === index ? <LeftArrow /> : <RightArrow />}
                 </span>
               </div>
-              {openedDepartment === index && department.subcategories && (
-                <div className="w-full bg-white rounded-md shadow-lg">
-                  {department.subcategories.map((subcategory, subIndex) => (
-                    <Link
-                      to={subcategory.path}
-                      key={subIndex}
-                      className="block p-2 text-sm text-black font-normal"
-                    >
-                      {subcategory.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
+              {openedDepartment === index &&
+                departmentCategory.subCategories && (
+                  <div className="w-full bg-white rounded-md shadow-lg">
+                    {departmentCategory.subCategories.map(
+                      (subcategory, subIndex) => (
+                        <Link
+                          to={subcategory.path}
+                          key={subIndex}
+                          className="block p-2 text-sm text-black font-normal"
+                        >
+                          {subcategory.name}
+                        </Link>
+                      )
+                    )}
+                  </div>
+                )}
             </div>
           ))}
         </div>
