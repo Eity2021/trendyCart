@@ -20,8 +20,9 @@ export default function Profile({ user }) {
 
   const logOut = () => {
     dispatch(userLoggedOut());
-    localStorage.clear();
-    navigate("/login");
+    // localStorage.clear();
+    localStorage.removeItem('auth');
+    navigate("/login" , { replace: true });
   };
 
   return (

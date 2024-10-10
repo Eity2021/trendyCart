@@ -4,20 +4,21 @@ import myAccountBg from "../../../assets/images/login/my_account_bg.png";
 import { useLoginMutation } from "../../../features/auth/authApi";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
+import { userLoggedIn } from "../../../features/auth/authSlice";
 export default function LoginForm() {
   const [error, setError] = useState("");
   const [resLogin, { data, isLoading, error: loginError }] = useLoginMutation();
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    if (loginError?.data) {
-      setError(loginError.data);
-    }
-    if (data?.data?.access?.token && data?.data?.user) {
+    if (data?.data?.access?.token) {
+      dispatch(userLoggedIn());
       navigate("/");
     }
-  }, [data, loginError, navigate]);
+  }, [data, dispatch, navigate]);
 
   const {
     register,
@@ -43,7 +44,6 @@ export default function LoginForm() {
           <h1 className="text-center  md:text-4xl text-3xl   font-bold ">
             <span className="text-loginColor">LOGIN </span>/ REGISTER
           </h1>
-
           <div
             className=" bg-cover bg-center bg-loginBg  md:w-[750px] w-full  mt-8"
             style={{ backgroundImage: `url(${myAccountBg})` }}
@@ -82,21 +82,17 @@ export default function LoginForm() {
                       />
                     </div>
                   </div>
-
                   <div className="flex justify-between">
                     <div className="pt-6 flex  items-center ">
                       <input type="checkbox" className="checkbox w-4 h-4" />
                       <div>
                         <small className="text-sm text-black pl-2">
-                          {" "}
                           Remember me
                         </small>
                       </div>
                     </div>
-
-                    <div className="pt-6">
+               <div className="pt-6">
                       <small className="text-sm text-black pl-2 uppercase">
-                        {" "}
                         FORGOT PASSWORD
                       </small>
                     </div>

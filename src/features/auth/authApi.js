@@ -13,18 +13,14 @@ export const authApi = apiSlice.injectEndpoints({
       async onQueryStarted(arg, { queryFulfilled, dispatch }) {
         try {
           const result = await queryFulfilled;
-      
           localStorage.setItem(
             "auth",
             JSON.stringify({
               accessToken: result.data.data.access.token,
               // user: result.data.data.user,
-            }
-          
-          )
-            
+            })
           );
-          console.log("result",result.data.data.access.token);
+          console.log("result", result.data.data.access.token);
           dispatch(
             userLoggedIn({
               accessToken: result.data.data.access.token,
@@ -36,6 +32,7 @@ export const authApi = apiSlice.injectEndpoints({
         }
       },
     }),
+
     login: builder.mutation({
       query: (data) => ({
         url: "/auth/login",
@@ -46,7 +43,6 @@ export const authApi = apiSlice.injectEndpoints({
       async onQueryStarted(arg, { queryFulfilled, dispatch }) {
         try {
           const result = await queryFulfilled;
-
           localStorage.setItem(
             "auth",
             JSON.stringify({

@@ -7,19 +7,17 @@ export default function useAuthCheck() {
   const [authChecked, setAuthChecked] = useState(false);
   useEffect(() => {
     const localAuth = localStorage?.getItem("auth");
-
-    console.log("localAuth", localAuth);
     if (localAuth) {
       const auth = JSON.parse(localAuth);
       if (auth?.accessToken) {
         dispatch(
           userLoggedIn({
-            accessToken: auth.accessToken,
+            accessToken: auth?.accessToken,
           })
         );
       }
     }
     setAuthChecked(true);
-  }, [dispatch, setAuthChecked]);
+  }, [dispatch]);
   return authChecked;
 }

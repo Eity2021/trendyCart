@@ -6,20 +6,10 @@ export const apiSlice = createApi({
     baseUrl: process.env.REACT_APP_API_URL,
     prepareHeaders: async (headers, { getState, endpoint }) => {
       const token = getState()?.auth?.accessToken;
-   
-      // if (token) {
-      //   headers.set("Authorization", `Bearer ${token}`);
-      // }
-      if (!token) {
-        localStorage.getItem("accessToken");
-        console.log("localStorage",token);
-      }
-  
+       console.log("token",token)
       if (token) {
         headers.set("Authorization", `Bearer ${token}`);
-        console.log("headers",token);
       }
-
       return headers;
     },
   }),
