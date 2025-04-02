@@ -27,6 +27,7 @@ export default function LoginForm() {
   } = useForm();
 
   const onSubmit = (formData) => {
+    console.log("form data", formData)
     setError("");
     resLogin({
       email: formData.email,

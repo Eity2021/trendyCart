@@ -18,12 +18,6 @@ export default function RightMainHeader({ toggleSidebar }) {
   const handleMouseLeave = () => {
     setIsOpen(false);
   };
-
-  // const { data: user, isLoading, isError, error } = useGetUserQuery(undefined, {
-  //   refetchOnMountOrArgChange: true,
-  // });
-  // console.log("user", user);
-
   const {
     data: user,
     isLoading,

@@ -5,7 +5,7 @@ export const authApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     register: builder.mutation({
       query: (data) => ({
-        url: "/auth/register",
+        url: "/api/auth/register",
         method: "POST",
         body: data,
       }),
@@ -16,15 +16,13 @@ export const authApi = apiSlice.injectEndpoints({
           localStorage.setItem(
             "auth",
             JSON.stringify({
-              accessToken: result.data.data.access.token,
-              // user: result.data.data.user,
+              accessToken: result.data.data.token,
             })
           );
-          console.log("result", result.data.data.access.token);
+
           dispatch(
             userLoggedIn({
-              accessToken: result.data.data.access.token,
-              // user: result.data.data.user,
+              accessToken: result.data.data.token,
             })
           );
         } catch (err) {
@@ -35,7 +33,7 @@ export const authApi = apiSlice.injectEndpoints({
 
     login: builder.mutation({
       query: (data) => ({
-        url: "/auth/login",
+        url: "/api/auth/login",
         method: "POST",
         body: data,
       }),
@@ -46,20 +44,15 @@ export const authApi = apiSlice.injectEndpoints({
           localStorage.setItem(
             "auth",
             JSON.stringify({
-              accessToken: result.data.data.access.token,
-              // user: result.data.data.user,
+              accessToken: result.data.data.token,
             })
           );
-
           dispatch(
             userLoggedIn({
-              accessToken: result.data.data.access.token,
-              // user: result.data.data.user,
+              accessToken: result.data.data.token,
             })
           );
-        } catch (err) {
-          //do nothing
-        }
+        } catch (err) {}
       },
     }),
   }),

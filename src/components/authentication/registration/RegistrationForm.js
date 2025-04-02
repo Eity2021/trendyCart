@@ -9,7 +9,7 @@ export default function RegistrationForm() {
   const [error, setError] = useState("");
   const [resRegister, { data, isLoading, error: loginError }] =
     useRegisterMutation();
-  console.log("Access Token:", data);
+
 
   const navigate = useNavigate();
 
@@ -25,16 +25,14 @@ export default function RegistrationForm() {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
   const onSubmit = (formData) => {
-    console.log(formData);
     setError("");
     resRegister({
-      firstName: formData.firstName,
-      lastName: formData.lastName,
+      name: formData.name,
+      phone: formData.phone,
       email: formData.email,
       password: formData.password,
     });
@@ -59,37 +57,38 @@ export default function RegistrationForm() {
               <SocialAuth></SocialAuth>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="lg:px -0 px-4">
-                  <div className="grid grid-cols-2 gap-4 mb-4">
-                    <div className="">
+             
+                    <div className="mb-4">
                       <label className="text-black  text-sm">
-                        FIRST NAME *
+                        ENTER NAME *
                       </label>
 
                       <div className="pt-2">
                         <input
-                          {...register("firstName", { required: true })}
+                          {...register("name", { required: true })}
                           type="text"
                           placeholder="Type here"
                           className="input input-bordered-none  rounded-none w-full max-w"
                         />
                       </div>
-                    </div>
-                    <div className="">
-                      <label className="text-black  text-sm">LAST NAME *</label>
-
-                      <div className="pt-2">
-                        <input
-                          {...register("lastName", { required: true })}
-                          type="text"
-                          placeholder="Type here"
-                          className="input input-bordered-none  rounded-none w-full max-w"
-                        />
-                      </div>
-                    </div>
                   </div>
 
                   <div className=" mb-2">
-                    <label className="text-black  text-sm">
+                    <label className="text-black  text-sm fontFamily-">
+                      PHONE NUMBER*
+                    </label>
+
+                    <div className="pt-2">
+                      <input
+                        {...register("phone", { required: true })}
+                        type="number"
+                        placeholder="Type here"
+                        className="input input-bordered-none  rounded-none w-full max-w"
+                      />
+                    </div>
+                  </div>
+                  <div className=" mb-2">
+                    <label className="text-black  text-sm fontFamily-">
                       EMAIL ADDRESS *
                     </label>
 

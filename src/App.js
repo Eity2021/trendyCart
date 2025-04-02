@@ -4,6 +4,7 @@ import MainLayout from "./components/layout/MainLayout";
 import { useRoutes } from "react-router-dom";
 import MainRoutes from "./routes/MainRoutes";
 import useAuthCheck from "./hooks/useAuthCheck";
+
 function App() {
   const routes = useRoutes([MainRoutes]);
   const authChecked = useAuthCheck();
