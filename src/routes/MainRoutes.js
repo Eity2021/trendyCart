@@ -99,7 +99,7 @@ const MainRoutes = {
     {
       path: "registration",
       element: (
-        <PublicRoutes>
+
           <Suspense
             fallback={
               <div className="h-screen  flex justify-center items-center">
@@ -109,7 +109,7 @@ const MainRoutes = {
           >
             <Registration />
           </Suspense>
-        </PublicRoutes>
+
       ),
     },
     {
@@ -225,6 +225,7 @@ const MainRoutes = {
       ),
     },
   ],
+  
 };
 
 export default MainRoutes;

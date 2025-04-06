@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Cart from "../../../components/svg/Cart";
 import WishList from "../../../components/svg/WishList";
 import Hamburger from "../../../components/svg/Hamburger";
-import Profile from "./Profile";
 import HeaderCart from "../../headerCart/HeaderCart";
 import { useGetUserQuery } from "../../../features/user/userApi";
-import { useSelector } from "react-redux";
+
 export default function RightMainHeader({ toggleSidebar }) {
   const [isOpen, setIsOpen] = useState(false);
-  const token = useSelector((state) => state.auth?.accessToken);
+
+  const { data: profileData ,isLoading,isError} = useGetUserQuery();
+
+  console.log("profileData", profileData?.data?.user);
 
   const handleMouseEnter = () => {
     setIsOpen(true);
@@ -18,19 +20,7 @@ export default function RightMainHeader({ toggleSidebar }) {
   const handleMouseLeave = () => {
     setIsOpen(false);
   };
-  const {
-    data: user,
-    isLoading,
-    refetch,
-  } = useGetUserQuery(undefined, {
-    skip: !token,
-  });
 
-  useEffect(() => {
-    if (token) {
-      refetch();
-    }
-  }, [token, refetch]);
 
   return (
     <div className="flex ">
@@ -75,9 +65,7 @@ export default function RightMainHeader({ toggleSidebar }) {
             </div>
           )}
         </li>
-        <li>
-          <div>{user && <Profile user={user}></Profile>}</div>
-        </li>
+        <li>{/* <div>{user && <Profile user={user}></Profile>}</div> */}</li>
       </ul>
       <div className="md:hidden pl-2">
         <button onClick={toggleSidebar}>
