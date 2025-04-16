@@ -17,7 +17,7 @@ export default function RegistrationForm() {
     if (loginError?.data) {
       setError(loginError.data);
     }
-    if (data?.data?.access?.token && data?.data?.user) {
+    if (data?.data?.token) {
       navigate("/");
     }
   }, [data, loginError, navigate]);

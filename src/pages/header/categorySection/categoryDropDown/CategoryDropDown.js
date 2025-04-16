@@ -6,11 +6,12 @@ import RightArrow from "../../../../components/svg/RightArrow";
 import Department from "../../../../components/svg/Department";
 import avatar from "../../../../assets/images/header/avatar.jpg";
 
-export default function CategoryDropDown({ category }) {
-  const categories = category?.data;
-
+export default function CategoryDropDown({ categoryLists }) {
+  // const categories = category?.data;
+console.log("categoryLists", categoryLists)
   const [hoveredDepartment, setHoveredDepartment] = useState(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(true);
+
   const location = useLocation();
   const handleMouseEnter = (index) => {
     setHoveredDepartment(index);
@@ -43,7 +44,7 @@ export default function CategoryDropDown({ category }) {
       </button>
       {isDropdownOpen && (
         <div className="absolute top-20 left-0 mt-2 md:w-72 w-full bg-white rounded-md shadow-lg z-10">
-          {categories?.map((departmentCategory, index) => (
+          {categoryLists?.map((departmentCategory, index) => (
             <div
               key={index}
               className="relative group"
@@ -59,7 +60,7 @@ export default function CategoryDropDown({ category }) {
                   </div>
                   <div>
                     <p className="text-sm text-black  font-normal">
-                      {departmentCategory.name}
+                      {departmentCategory.category_name}
                     </p>
                   </div>
                 </div>
@@ -82,7 +83,7 @@ export default function CategoryDropDown({ category }) {
                           key={subIndex}
                           className="block p-2 text-sm text-black  font-normal"
                         >
-                          {subcategory.name}
+                          {subcategory.subCategory_name}
                         </Link>
                       )
                     )}

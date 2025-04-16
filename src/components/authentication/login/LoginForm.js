@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import patternBg from "../../../assets/images/login/pattern_bg.jpg";
 import myAccountBg from "../../../assets/images/login/my_account_bg.png";
 import { useLoginMutation } from "../../../features/auth/authApi";
@@ -13,12 +13,18 @@ export default function LoginForm() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+// eslint-disable-next-line react-hooks/exhaustive-deps
+const handleLeave = useCallback(() => {
+  navigate("/");
+}, [navigate]);
+
   useEffect(() => {
-    if (data?.data?.access?.token) {
-      dispatch(userLoggedIn());
-      navigate("/");
-    }
-  }, [data, dispatch, navigate]);
+    console.log("Login response:", data?.data?.token);
+     if (data?.data?.token) {
+      dispatch(userLoggedIn({accessToken: data?.data?.token}));
+      handleLeave()
+     }
+  }, [data, dispatch, handleLeave]);
 
   const {
     register,

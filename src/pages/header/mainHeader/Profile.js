@@ -5,6 +5,10 @@ import { userLoggedOut } from "../../../features/auth/authSlice";
 import Logout from "../../../components/svg/Logout";
 
 export default function Profile({ user }) {
+  
+  const {user_image ,name} = user;
+  // console.log("user", user);
+
   const [isOpen, setIsOpen] = useState(false);
 
   const dispatch = useDispatch();
@@ -20,7 +24,6 @@ export default function Profile({ user }) {
 
   const logOut = () => {
     dispatch(userLoggedOut());
-    // localStorage.clear();
     localStorage.removeItem('auth');
     navigate("/login" , { replace: true });
   };
@@ -28,9 +31,9 @@ export default function Profile({ user }) {
   return (
     <div className="relative inline-block text-left">
       <div className="avatar" onClick={toggleDropdown}>
-        <div className="w-8 rounded-full cursor-pointer">
+        <div className="w-8 rounded-full cursor-pointer shadow-xl">
           <img
-            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+            src={user_image}
             alt="Avatar"
           />
         </div>
@@ -47,14 +50,14 @@ export default function Profile({ user }) {
             <div className="flex justify-between px-4 py-4">
               <div className="flex gap-2">
                 <div className="avatar">
-                  <div className="w-10 rounded-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  <div className="w-8 rounded-full shadow-xl">
+                    <img src={user_image} alt="avatar"/>
                   </div>
                 </div>
 
                 <div className="flex items-center">
                   <p className="text-sm text-text-paragraph">
-                    {user?.data?.firstName + " " + user?.data?.lastName}
+                    {name}
                   </p>
                 </div>
               </div>

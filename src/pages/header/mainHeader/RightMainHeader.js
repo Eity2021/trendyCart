@@ -5,13 +5,13 @@ import WishList from "../../../components/svg/WishList";
 import Hamburger from "../../../components/svg/Hamburger";
 import HeaderCart from "../../headerCart/HeaderCart";
 import { useGetUserQuery } from "../../../features/user/userApi";
+import Profile from "./Profile";
 
 export default function RightMainHeader({ toggleSidebar }) {
   const [isOpen, setIsOpen] = useState(false);
-
+  const auth = localStorage.getItem('auth');
   const { data: profileData ,isLoading,isError} = useGetUserQuery();
-
-  console.log("profileData", profileData?.data?.user);
+  let user = profileData?.data?.user;
 
   const handleMouseEnter = () => {
     setIsOpen(true);
@@ -65,7 +65,7 @@ export default function RightMainHeader({ toggleSidebar }) {
             </div>
           )}
         </li>
-        <li>{/* <div>{user && <Profile user={user}></Profile>}</div> */}</li>
+        <li> <div>{auth && user && <Profile user={user}></Profile>}</div> </li>
       </ul>
       <div className="md:hidden pl-2">
         <button onClick={toggleSidebar}>

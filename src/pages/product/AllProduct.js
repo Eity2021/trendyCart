@@ -137,9 +137,9 @@ export default function AllProduct() {
   ];
   const {data:products, isLoading,isError,error} = useGetProductsQuery();
 
-const AllProducts = products?.data?.products;
+const AllProducts = products?.products;
 
-  console.log("products",AllProducts)
+  // console.log("products",AllProducts)
   return (
     <div className="mb-10">
       <div className="flex justify-between">
