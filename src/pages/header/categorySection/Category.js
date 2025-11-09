@@ -7,7 +7,7 @@ import { useGetCategoryQuery } from "../../../features/category/categoriesApi";
 
 export default function Category() {
 
-  const {data:category, isLoading,isError,error} = useGetCategoryQuery();
+  const {data:category, isLoading,isError} = useGetCategoryQuery();
 
   let categoryLists = category?.categoriesList;
   // console.log("category",categoryLists)

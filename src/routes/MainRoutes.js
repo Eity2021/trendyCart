@@ -1,8 +1,10 @@
 import { Suspense, lazy } from "react";
 import HashLoader from "react-spinners/HashLoader";
 import OrderComplete from "../pages/orderComplete";
+import SubCategoriesDetails from "../pages/header/categorySection/categoryDropDown/subCategoriesDetails/SubCategoriesDetails";
+import CategoryDetails from "../pages/header/categorySection/categoryDropDown/CategoryDetails";
 // import PrivateRoutes from "../components/routes/PrivateRoutes";
-const PublicRoutes = lazy(() => import("../components/routes/PublicRoutes"));
+// const PublicRoutes = lazy(() => import("../components/routes/PublicRoutes"));
 const CheckOut = lazy(() => import("../pages/checkOut"));
 const PageNotFound = lazy(() => import("../pages/pageNotFound"));
 const SingleProduct = lazy(() => import("../pages/singleProduct"));
@@ -221,6 +223,34 @@ const MainRoutes = {
           }
         >
           <OrderComplete />
+        </Suspense>
+      ),
+    },
+    {
+      path: "subCategoriesDetails/:id",
+      element: (
+        <Suspense
+          fallback={
+            <div className="h-screen  flex justify-center items-center">
+              <HashLoader color="#f7ba01" />
+            </div>
+          }
+        >
+          <SubCategoriesDetails />
+        </Suspense>
+      ),
+    },
+    {
+      path: "categoriesDetails/:id",
+      element: (
+        <Suspense
+          fallback={
+            <div className="h-screen  flex justify-center items-center">
+              <HashLoader color="#f7ba01" />
+            </div>
+          }
+        >
+          <CategoryDetails />
         </Suspense>
       ),
     },

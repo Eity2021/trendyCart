@@ -4,8 +4,8 @@ import avatar from "../../../../assets/images/header/avatar.jpg";
 import Department from "../../../../components/svg/Department";
 import LeftArrow from "../../../../components/svg/LeftArrow";
 import RightArrow from "../../../../components/svg/RightArrow";
-export default function MobileCategoryDropdown({ category }) {
-  const categories = category?.data;
+export default function MobileCategoryDropdown({ categoryLists }) {
+
 
   const [openedDepartment, setOpenedDepartment] = useState(null);
 
@@ -31,7 +31,7 @@ export default function MobileCategoryDropdown({ category }) {
 
       {isMobileDropdownOpen && (
         <div className="absolute top-20 left-0 mt-2 md:w-72 w-full   bg-white rounded-md shadow-lg ">
-          {categories?.map((departmentCategory, index) => (
+          {categoryLists?.map((departmentCategory, index) => (
             <div key={index} className="relative">
               <div
                 className="p-[14.5px] bg-white hover:bg-gray-200 cursor-pointer flex items-center justify-between"

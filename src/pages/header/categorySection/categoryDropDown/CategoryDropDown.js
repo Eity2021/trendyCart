@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import LeftArrow from "../../../../components/svg/LeftArrow";
 import RightArrow from "../../../../components/svg/RightArrow";
 import Department from "../../../../components/svg/Department";
-import avatar from "../../../../assets/images/header/avatar.jpg";
 
 export default function CategoryDropDown({ categoryLists }) {
+
   // const categories = category?.data;
-console.log("categoryLists", categoryLists)
+  console.log("categoryLists", categoryLists);
   const [hoveredDepartment, setHoveredDepartment] = useState(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(true);
 
@@ -51,11 +51,16 @@ console.log("categoryLists", categoryLists)
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
             >
+
+              <Link  to={`categoriesDetails/${departmentCategory._id}`}> 
               <div className="p-[14.5px] bg-white hover:bg-gray-200 cursor-pointer flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <div className="avatar">
                     <div className="w-6 rounded-full">
-                      <img src={avatar} alt="" />
+                      <img
+                        src={departmentCategory.categories_image}
+                        alt="avatar"
+                      />
                     </div>
                   </div>
                   <div>
@@ -68,22 +73,36 @@ console.log("categoryLists", categoryLists)
                 {departmentCategory.subCategories &&
                   departmentCategory.subCategories.length > 0 &&
                   (hoveredDepartment === index ? (
-                    <LeftArrow />
-                  ) : (
                     <RightArrow />
+                  ) : (
+                   
+                    <LeftArrow />
                   ))}
               </div>
+         </Link>
               {hoveredDepartment === index &&
                 departmentCategory.subCategories && (
                   <div className="absolute top-0 left-full w-48 bg-white rounded-md shadow-lg">
                     {departmentCategory.subCategories.map(
                       (subcategory, subIndex) => (
                         <Link
-                          to={subcategory.path}
+                          to={`subCategoriesDetails/${subcategory._id}`}
                           key={subIndex}
                           className="block p-2 text-sm text-black  font-normal"
                         >
-                          {subcategory.subCategory_name}
+                          <div className="flex gap-2">
+                            <div>
+                              <div className="avatar">
+                                <div className="w-6 rounded-full">
+                                  <img
+                                    src={subcategory.subCategories_image}
+                                    alt="subCategories_image"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div>{subcategory.subCategory_name}</div>
+                          </div>
                         </Link>
                       )
                     )}
