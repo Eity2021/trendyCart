@@ -7,8 +7,7 @@ import Department from "../../../../components/svg/Department";
 
 export default function CategoryDropDown({ categoryLists }) {
 
-  // const categories = category?.data;
-  console.log("categoryLists", categoryLists);
+
   const [hoveredDepartment, setHoveredDepartment] = useState(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(true);
 
@@ -24,7 +23,7 @@ export default function CategoryDropDown({ categoryLists }) {
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
-  // Update isDropdownOpen based on the current path
+
   useEffect(() => {
     if (location.pathname === "/") {
       setIsDropdownOpen(true);
@@ -52,34 +51,34 @@ export default function CategoryDropDown({ categoryLists }) {
               onMouseLeave={handleMouseLeave}
             >
 
-              <Link  to={`categoriesDetails/${departmentCategory._id}`}> 
-              <div className="p-[14.5px] bg-white hover:bg-gray-200 cursor-pointer flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <div className="avatar">
-                    <div className="w-6 rounded-full">
-                      <img
-                        src={departmentCategory.categories_image}
-                        alt="avatar"
-                      />
+              <Link to={`categoriesDetails/${departmentCategory._id}`}>
+                <div className="p-[14.5px] bg-white hover:bg-gray-200 cursor-pointer flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <div className="avatar">
+                      <div className="w-6 rounded-full">
+                        <img
+                          src={departmentCategory.categories_image}
+                          alt="avatar"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <p className="text-sm text-black  font-normal">
+                        {departmentCategory.category_name}
+                      </p>
                     </div>
                   </div>
-                  <div>
-                    <p className="text-sm text-black  font-normal">
-                      {departmentCategory.category_name}
-                    </p>
-                  </div>
-                </div>
 
-                {departmentCategory.subCategories &&
-                  departmentCategory.subCategories.length > 0 &&
-                  (hoveredDepartment === index ? (
-                    <RightArrow />
-                  ) : (
-                   
-                    <LeftArrow />
-                  ))}
-              </div>
-         </Link>
+                  {departmentCategory.subCategories &&
+                    departmentCategory.subCategories.length > 0 &&
+                    (hoveredDepartment === index ? (
+                      <RightArrow />
+                    ) : (
+
+                      <LeftArrow />
+                    ))}
+                </div>
+              </Link>
               {hoveredDepartment === index &&
                 departmentCategory.subCategories && (
                   <div className="absolute top-0 left-full w-48 bg-white rounded-md shadow-lg">

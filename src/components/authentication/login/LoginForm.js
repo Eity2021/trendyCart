@@ -13,17 +13,17 @@ export default function LoginForm() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-// eslint-disable-next-line react-hooks/exhaustive-deps
-const handleLeave = useCallback(() => {
-  navigate("/");
-}, [navigate]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const handleLeave = useCallback(() => {
+    navigate("/");
+  }, [navigate]);
 
   useEffect(() => {
-    console.log("Login response:", data?.data?.token);
-     if (data?.data?.token) {
-      dispatch(userLoggedIn({accessToken: data?.data?.token}));
+    console.log("Login response:", data?.token);
+    if (data?.token) {
+      dispatch(userLoggedIn({ accessToken: data?.token }));
       handleLeave()
-     }
+    }
   }, [data, dispatch, handleLeave]);
 
   const {
@@ -97,7 +97,7 @@ const handleLeave = useCallback(() => {
                         </small>
                       </div>
                     </div>
-               <div className="pt-6">
+                    <div className="pt-6">
                       <small className="text-sm text-black pl-2 uppercase">
                         FORGOT PASSWORD
                       </small>

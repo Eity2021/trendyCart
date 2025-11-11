@@ -6,10 +6,8 @@ import { useGetProductsQuery } from "../../features/product/ProductApi";
 export default function AllProduct() {
 
   const { data: products, isLoading, isError, error } = useGetProductsQuery();
-
   const allProducts = products?.products;
 
-  //  console.log("products", allProducts)
   return (
     <div className="mb-10">
       <div className="flex justify-between">
@@ -41,7 +39,7 @@ export default function AllProduct() {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-10 mt-6">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10 mt-6">
         {allProducts?.map((product) => (
           <div key={product._id}>
             <AllProductList product={product}></AllProductList>
